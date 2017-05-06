@@ -90,7 +90,7 @@ extern uint64 nLocalServices;
 extern CAddress addrLocalHost;
 extern CAddress addrSeenByPeer;
 extern uint64 nLocalHostNonce;
-extern boost::array<int, THREAD_MAX> vnThreadsRunning;
+extern int vnThreadsRunning[THREAD_MAX];
 extern CAddrMan addrman;
 
 extern std::vector<CNode*> vNodes;

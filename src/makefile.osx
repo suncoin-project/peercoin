@@ -18,6 +18,7 @@ INCLUDEPATHS= \
 
 LIBPATHS= \
  -L"$(DEPSDIR)/lib" \
+ -L"/usr/local/opt/boost@1.55/lib" \
  -L"$(DEPSDIR)/lib/db48"
 
 USE_UPNP:=1
