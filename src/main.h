@@ -51,10 +51,10 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
-static const uint256 hashGenesisBlockOfficial("0x0000000032fe677166d54963b62a4677d8957e87c508eaa4fd7eb1c880cd27e3");
-static const uint256 hashGenesisBlockTestNet("0x00000001f757bb737f6596503e17cd17b0658ce630cc727c0cca81aec47c9f06");
+static const uint256 hashGenesisBlockOfficial("0x00000000d84fe2b92bbefa7fbba527acb93e7b98160f27b12a5a3b603a5ee321");
+static const uint256 hashGenesisBlockTestNet("0x00000000d84fe2b92bbefa7fbba527acb93e7b98160f27b12a5a3b603a5ee321");
 
-static const int64 nMaxClockDrift = 2 * 60 * 60;        // two hours
+static const int64 nMaxClockDrift = 6 * 60 * 60;        // two hours
 
 extern CScript COINBASE_FLAGS;
 
@@ -1800,7 +1800,7 @@ public:
     bool CheckSignature()
     {
         CKey key;
-        if (!key.SetPubKey(ParseHex("04a0a849dd49b113d3179a332dd77715c43be4d0076e2f19e66de23dd707e56630f792f298dfd209bf042bb3561f4af6983f3d81e439737ab0bf7f898fecd21aab")))
+        if (!key.SetPubKey(ParseHex("8364a849dd49b113d3179a332dd77715c43be4d0076e2f19e66de23dd707e56630f792f298dfd209bf042bb3561f4af6983f3d81e439737ab0bf7f898fecd21aab")))
             return error("CAlert::CheckSignature() : SetPubKey failed");
         if (!key.Verify(Hash(vchMsg.begin(), vchMsg.end()), vchSig))
             return error("CAlert::CheckSignature() : verify signature failed");
