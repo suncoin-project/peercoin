@@ -2326,9 +2326,9 @@ bool LoadBlockIndex(bool fAllowNew)
         //   vMerkleTree: 4a5e1e
 
         // Genesis block
-        const char* pszTimestamp = "Matonis 07-AUG-2012 Parallel Currencies And The Roadmap To Monetary Freedom";
+        const char* pszTimestamp = "Billy 06-May-2017 Design!";
         CTransaction txNew;
-        txNew.nTime = 1345083810;
+        txNew.nTime = 1494073973;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(9999) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2338,21 +2338,39 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1345084287;
+        block.nTime    = 1494093360;//1494073973;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 2179302059u;
+        block.nNonce   = 3839403711;
 
         if (fTestNet)
         {
-            block.nTime    = 1345090000;
-            block.nNonce   = 122894938;
+            block.nTime    = 1494093360;//1494073973;
+            block.nNonce   = 3839403711;
         }
+        // CBigNum bnTarget;
+        // bnTarget.SetCompact(block.nBits);
+        // while (block.GetHash() > bnTarget.getuint256())
+        // {
+        //     if (block.nNonce % 1048576 == 0)
+        //         printf("n=%dM hash=%s\n", block.nNonce / 1048576,
+        //                block.GetHash().ToString().c_str());
+        //     block.nTime = GetAdjustedTime();
+        //     block.nNonce++;
+        // }
+        // printf("PPCoin Found Genesis Block:\n");
+        // printf("genesis hash=%s\n", block.GetHash().ToString().c_str());
+        // printf("merkle root=%s\n", block.hashMerkleRoot.ToString().c_str());
+        //printf("block.nTime = %u \n", block.nTime);
+        //printf("block.nNonce = %u \n", block.nNonce);
+        // block.print();
+        // printf("PPCoin End Genesis Block\n");
 
         //// debug print
         printf("%s\n", block.GetHash().ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x3c2d8f85fab4d17aac558cc648a1a58acff0de6deb890c29985690052c5993c2"));
+        assert(block.hashMerkleRoot == uint256("0x3959d62f7c24d59b667ac8ec43b38f43752d4978554e30ab42ad33729b622b30"));
+
         block.print();
         assert(block.GetHash() == hashGenesisBlock);
         assert(block.CheckBlock());
