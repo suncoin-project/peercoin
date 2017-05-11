@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2012 The PPCoin developers
+// Copyright (c) 2012 The Bitcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef H_BITCOIN_SCRIPT
@@ -431,7 +431,7 @@ public:
         // Immediate operand
         if (opcode <= OP_PUSHDATA4)
         {
-            unsigned int nSize;
+            unsigned int nSize = 0;
             if (opcode < OP_PUSHDATA1)
             {
                 nSize = opcode;

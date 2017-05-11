@@ -1,6 +1,6 @@
-Peercoin (PPCoin) 0.5.4 BETA
+Bitcoin 0.5.4 BETA
 
-Copyright (c) 2011-2016 Peercoin (PPCoin) Developers
+Copyright (c) 2011-2016 Bitcoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file license.txt or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in
@@ -10,7 +10,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com).
 
 Intro
 -----
-Peercoin (PPCoin) is a free open source project derived from Bitcoin, with
+Bitcoin is a free open source project derived from Bitcoin, with
 the goal of providing a long-term energy-efficient crypto-currency.
 Built on the foundation of Bitcoin, innovations such as proof-of-stake
 help further advance the field of crypto-currency.
@@ -18,35 +18,35 @@ help further advance the field of crypto-currency.
 
 Setup
 -----
-After completing windows setup then run ppcoin-qt.
-Alternatively you can run windows command line (cmd) in ppcoin program dir.
+After completing windows setup then run bitcoin-qt.
+Alternatively you can run windows command line (cmd) in bitcoin program dir.
   cd daemon
-  ppcoind
-You would need to create a configuration file ppcoin.conf in the default
-wallet directory. Grant access to ppcoind/ppcoin-qt in anti-virus and firewall
+  bitcoind
+You would need to create a configuration file bitcoin.conf in the default
+wallet directory. Grant access to bitcoind/bitcoin-qt in anti-virus and firewall
 applications if necessary.
 
 The software automatically finds other nodes to connect to.  You can
 enable Universal Plug and Play (UPnP) with your router/firewall
 or forward port 9901 (TCP) to your computer so you can receive
-incoming connections.  PPCoin works without incoming connections,
-but allowing incoming connections helps the PPCoin network.
+incoming connections.  Bitcoin works without incoming connections,
+but allowing incoming connections helps the Bitcoin network.
 
 
 Upgrade
 -------
 All your existing coins/transactions should be intact with the upgrade.
 To upgrade from 0.4, first backup wallet in qt menu or by command line
-ppcoind backupwallet <destination_backup_file>
-Then shutdown ppcoind by
-ppcoind stop
+bitcoind backupwallet <destination_backup_file>
+Then shutdown bitcoind by
+bitcoind stop
 Uninstall v0.4 client, download and install v0.5 client.
 If upgrade is performed after or close to upgrade deadline, blockchain
 re-download is required.
 
 
 See the documentation/wiki at github:
-  http://github.com/ppcoin/ppcoin
+  http://github.com/bitcoin/bitcoin
 for help and more information.
 
 
