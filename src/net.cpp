@@ -1001,7 +1001,7 @@ void MapPort(bool /* unused fMapPort */)
 // The second name should resolve to a list of seed addresses.
 // testnet dns seed begins with 't', all else are bitcoin dns seeds.
 static const char *strDNSSeed[][2] = {
-    {"seed", "219.142.208.73"},
+    {"seed", "seed.bitcoinne.com"},
     {"seed-backup-01", "192.168.1.7"},
     {"seed-backup-02", "192.168.1.20"},
 };
@@ -1045,7 +1045,7 @@ void ThreadDNSAddressSeed2(void* parg)
                 BOOST_FOREACH(CNetAddr& ip, vaddr)
                 {
                     int nOneDay = 24*3600;
-                    CAddress addr = CAddress(CService(ip, 9901));//9901 GetDefaultPort()
+                    CAddress addr = CAddress(CService(ip, GetDefaultPort()));//9901 GetDefaultPort()
                     addr.nTime = GetTime() - 3*nOneDay - GetRand(4*nOneDay); // use a random age between 3 and 7 days old
                     vAdd.push_back(addr);
                     found++;
