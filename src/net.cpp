@@ -1001,7 +1001,9 @@ void MapPort(bool /* unused fMapPort */)
 // The second name should resolve to a list of seed addresses.
 // testnet dns seed begins with 't', all else are bitcoin dns seeds.
 static const char *strDNSSeed[][2] = {
-    {"seed", "124.126.95.59"},
+    {"seed", "219.142.208.73"},
+    {"seed-backup-01", "192.168.1.7"},
+    {"seed-backup-02", "192.168.1.20"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
